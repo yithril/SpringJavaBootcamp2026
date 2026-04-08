@@ -1,0 +1,41 @@
+Warm-Up Exercise 
+Did you pull like you were supposed to? Well you can get a head start on this and then chill during 
+exercise time!
+
+Review Quiz - Answer the following questions:
+
+1. In your own words, what is the command prompt?
+2. What does the command "cd" stand for?
+3. If I want to change my current directory to "C:/Bootcamp/SpringJavaBootcamp2025", what would I type?
+4. What command allows me to see all files in the current directory?
+5. What does "cd .." do?
+6. In your own words what is Git? Is there a difference between GitHub and Git?
+7. A collection of code and files in a single place of storage is called a ____________
+8. What does the command "git clone" do?
+9. What does the command "git pull" do?
+
+BONUS
+10. What do you think the command "git push" does?
+
+Warm Up Activity
+
+Create a project in your EXERCISES folder and do the following
+
+// Scenario 1: Storing a person's name
+// Create a String variable named "personName" and set it to "John Doe"
+
+
+// Scenario 2: Storing a person's age
+// Create an int variable named "personAge" and set it to 25
+
+
+// Scenario 3: Storing the price of a product
+// Create a double variable named "productPrice" and set it to 19.99
+
+
+// Scenario 4: Storing the temperature in Celsius
+// Create a float variable named "temperatureCelsius" and set it to 27.5
+
+
+// Scenario 5: Storing a login status
+// Create a boolean variable named "isLoggedIn" and set it to true
