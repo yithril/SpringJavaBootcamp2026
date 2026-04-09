@@ -28,7 +28,7 @@ If they are under 48 inches, they cannot ride.
 
 Questions:
 
-What are the three outcomes?
+What are the possible outcomes?
 
 What measurements mark the transition between categories?
 
@@ -53,8 +53,11 @@ Any other day: "No school lunch today"
 
 Questions:
 
-How many possible branches are there?
+How many possibilities are there?
 
-What happens if someone enters "saturday" in lowercase?
+What happens if someone enters "tuesday" in lowercase as opposed to "Tuesday"?
 
-Is this logic scalable if the school starts rotating menus every month?
+
+FINAL EXERCISE
+
+Let's map it out. For each scenario let's pseudo code! Use IF, ELSE IF, and ELSE to map out the conditions. Doesn't have to be real code, pseudo code in notepad is fine.
