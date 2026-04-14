@@ -1,0 +1,115 @@
+# Java UML to Class Worksheet
+
+## Setup Instructions (Do This First)
+
+1. Open IntelliJ
+2. Create a new Java project inside your **Exercises** folder
+3. Name the project:
+   
+   UMLClassPractice
+
+4. Inside your `src` folder, create the following classes:
+   - Student.java
+   - Car.java
+   - User.java
+
+---
+
+## Directions
+
+For each UML diagram below:
+
+- Create a Java class that matches the diagram exactly
+- Use `private` for properties
+- Generate **getters AND setters** for all properties
+- Write the constructor(s) exactly as shown
+- Do NOT add extra methods
+
+---
+
+## Example (Reference)
+
+UML:
+
+Book
+------------------------
+- title : String
+- pages : int
+------------------------
++ Book(title : String, pages : int)
++ getTitle() : String
++ setTitle(title : String) : void
++ getPages() : int
++ setPages(pages : int) : void
+
+---
+
+## Problem 1 
+
+UML:
+
+Student
+------------------------
+- name : String
+- gradeLevel : int
+------------------------
++ Student(name : String, gradeLevel : int)
++ getName() : String
++ setName(name : String) : void
++ getGradeLevel() : int
++ setGradeLevel(gradeLevel : int) : void
+
+---
+
+## Problem 2 
+
+UML:
+
+Car
+------------------------
+- make : String
+- model : String
+- year : int
+------------------------
++ Car(make : String, model : String, year : int)
++ getMake() : String
++ setMake(make : String) : void
++ getModel() : String
++ setModel(model : String) : void
++ getYear() : int
++ setYear(year : int) : void
+
+
+---
+
+## Problem 3 
+
+UML:
+
+User
+------------------------
+- username : String
+- email : String
+- age : int
+------------------------
++ User(username : String)
++ User(username : String, email : String, age : int)
++ getUsername() : String
++ setUsername(username : String) : void
++ getEmail() : String
++ setEmail(email : String) : void
++ getAge() : int
++ setAge(age : int) : void
+
+
+---
+
+## Final Check (Before You Submit)
+
+For each class, make sure:
+
+- All properties are `private`
+- You have **getters AND setters** for every property
+- Constructors match the UML exactly
+- Class names and file names match
+- Code compiles without errors
