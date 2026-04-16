@@ -3,7 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 //If you're feeling more advanced we can use methods to break up
-//our code so everything isn't crammed into main
+//our code so everything isn't crammed into the main method
 public class MainAdvanced {
     public static void main(String[] args) {
 
