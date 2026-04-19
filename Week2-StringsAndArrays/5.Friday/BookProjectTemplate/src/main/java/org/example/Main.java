@@ -35,6 +35,8 @@ public class Main {
             //How do we exit the program?
             //This command kills the program at whatever point its at.
             System.exit(0);
+
+            //break
         }
     }
 }
