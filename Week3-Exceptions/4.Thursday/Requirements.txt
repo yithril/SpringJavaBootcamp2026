@@ -1,0 +1,27 @@
+Meeting:
+
+Use the products.csv file provided (without the header) OR make your own
+Product class with getter/setters, constructor, proper properties
+Customers should be able to:
+	View All Products
+	Search Products By Name or Price or Department
+	Customers Add Product to Cart
+Store Home Screen
+	Display Products
+	Display Cart
+	Exit - closes out of the application
+Display Products Screen
+	Search or filter the list of products
+	- Add a product to their cart
+	- Go Back to the home page
+
+Display Cart Screen (What is in the cart?)
+	Display Cart Total (Sum total of all the items in the cart)
+
+The menus don't have to look exactly the way they do in the workbook. Do what you think will be easiest for the user.
+
+Exceeding:
+Removing Items From Cart (This could be tricky!)
+Any ONE thing from the Bonus Section.
+I repeat, you do NOT need to do ALL the things in the bonus section to get exceeding.
+Pick at least ONE thing.
