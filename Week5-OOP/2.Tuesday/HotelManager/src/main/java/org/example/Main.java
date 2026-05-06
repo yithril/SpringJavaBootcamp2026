@@ -9,5 +9,9 @@ public class Main {
 
         //124 for a double 620
         System.out.println(reservation.getReservationTotal());
+
+        Room room = new Room(5, 5.5, false ,false);
+
+        room.setPrice(500);
     }
 }
