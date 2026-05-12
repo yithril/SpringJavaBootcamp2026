@@ -5,6 +5,12 @@ public class Animal {
     private String name;
     private int age;
 
+    public Animal(String animalType, String name, int age) {
+        this.animalType = animalType;
+        this.name = name;
+        this.age = age;
+    }
+
     public String getAnimalType() {
         return animalType;
     }
