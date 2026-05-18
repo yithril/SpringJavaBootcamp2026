@@ -11,6 +11,7 @@ public class Main {
             System.out.println("Caught an ArithmeticException: " + e.getMessage());
         }
 
+
         // Example 2: NumberFormatException
         try {
             String number = "abc123";
