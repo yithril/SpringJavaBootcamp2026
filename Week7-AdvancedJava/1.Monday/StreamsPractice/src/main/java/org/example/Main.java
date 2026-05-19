@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         List<Person> database = PersonRepository.getPeople();
-
+        
         // 1. Print the full names of all people who live in Texas.
 
         //displayPeople(texasList);
