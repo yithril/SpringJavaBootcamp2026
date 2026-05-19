@@ -15,30 +15,30 @@ public class Main {
                 .filter(book -> book.getAuthor().equalsIgnoreCase("Jane Austen"))
                 .toList();
 
-        //janeAustenBooks.forEach(book -> System.out.println(book.getTitle()));
+        janeAustenBooks.forEach(book -> System.out.println(book.getTitle()));
 
         //I want a list of books written by J.R.R. Tolkien over 400 pages
-//        books.stream()
-//                .filter(x -> x.getPages() > 400 && x.getAuthor().equalsIgnoreCase("J.R.R. Tolkien"))
-//                .forEach(x -> System.out.println(x.getTitle()));
+        books.stream()
+                .filter(x -> x.getPages() > 400 && x.getAuthor().equalsIgnoreCase("J.R.R. Tolkien"))
+                .forEach(x -> System.out.println(x.getTitle()));
 
         //I want non-Fantasy books
         //!= not equals
-//        books.stream()
-//                .filter(x -> !x.getGenre().equalsIgnoreCase("Fantasy"))
-//                .forEach(x -> System.out.println(x.getTitle()));
+        books.stream()
+                .filter(x -> !x.getGenre().equalsIgnoreCase("Fantasy"))
+                .forEach(x -> System.out.println(x.getTitle()));
 
         //MAP function
         //Show me a list of all book titles and nothing else
-//        books.stream()
-//                .map(y -> y.getTitle())
-//                .forEach(y -> System.out.println(y));
+        books.stream()
+                .map(y -> y.getTitle())
+                .forEach(y -> System.out.println(y));
 
         //This is the same
         //The :: are called method reference
-//        books.stream()
-//                .map(Book::getTitle)
-//                .forEach(System.out::println);
+        books.stream()
+                .map(Book::getTitle)
+                .forEach(System.out::println);
 
         //What is the average page number of our books?
         var averagePage = books.stream()
