@@ -1,0 +1,26 @@
+/* comments in CSS */
+/* to target by id use the # sign */
+
+#firstParagraph {
+    /*inside the curly braces is our styling*/
+    background-color: red;
+    border: 2px solid black;
+    padding: 30px;
+}
+
+/*you target class with the . */
+.blueParagraph{
+  color:magenta; 
+  text-align: center;
+} 
+
+/*Target just certain tags */
+
+div {
+    background-color: blue;
+}
+
+/* psuedo class */
+.blueParagraph:hover {
+    background-color: aquamarine;
+}
