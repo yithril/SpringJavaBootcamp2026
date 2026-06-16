@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Internship Platform</h1>
+            <p class="subtitle">Find Your Perfect Internship</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Internships Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Available Internships</h2>
+                    <button class="btn btn-primary" onclick="openCreateModal()">+ Add New Internship</button>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Loading internships...</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="error" class="error-message" style="display: none;">
+                    <p>❌ Could not connect to backend. Make sure the Spring Boot app is running on http://localhost:8080</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <p>📭 No internships available yet</p>
+                    <p class="hint">Click "Add New Internship" to create one!</p>
+                </div>
+
+                <!-- Internships Grid -->
+                <div id="internships-grid" class="internships-grid"></div>
+            </section>
+
+            <!-- Candidates Section -->
+            <section class="section">
+                <div class="section-header">
+                    <h2>Candidates</h2>
+                    <button class="btn btn-secondary" onclick="openCandidateModal()">+ Add Candidate</button>
+                </div>
+
+                <!-- Candidates List -->
+                <div id="candidates-list" class="candidates-list"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p onclick="this.textContent = 'ok fine, it was AI generated'" style="cursor: pointer;">This frontend was definitely not AI generated at all</p>
+            <p>Week 10 Demo App • Backend: <span id="backend-status" class="status-dot"></span></p>
+        </footer>
+    </div>
+
+    <!-- Create Internship Modal -->
+    <div id="create-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Internship</h3>
+                <button class="close-btn" onclick="closeCreateModal()">&times;</button>
+            </div>
+            <form id="create-form" onsubmit="createInternship(event)">
+                <div class="form-group">
+                    <label for="title">Job Title *</label>
+                    <input type="text" id="title" name="title" required placeholder="e.g., Java Developer Intern">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company *</label>
+                    <input type="text" id="company" name="company" required placeholder="e.g., Tech Corp">
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" id="location" name="location" required placeholder="e.g., Amsterdam">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" rows="4" required placeholder="Describe the internship..."></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="published" name="published" checked>
+                        <span>Publish immediately</span>
+                    </label>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ghost" onclick="closeCreateModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Internship</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Create Candidate Modal -->
+    <div id="candidate-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Candidate</h3>
+                <button class="close-btn" onclick="closeCandidateModal()">&times;</button>
+            </div>
+            <form id="candidate-form" onsubmit="createCandidate(event)">
+                <div class="form-group">
+                    <label for="candidate-name">Name *</label>
+                    <input type="text" id="candidate-name" name="name" required placeholder="e.g., Jan de Vries">
+                </div>
+
+                <div class="form-group">
+                    <label for="candidate-email">Email *</label>
+                    <input type="email" id="candidate-email" name="email" required placeholder="e.g., jan@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="candidate-field">Field of Study *</label>
+                    <input type="text" id="candidate-field" name="fieldOfStudy" required placeholder="e.g., Computer Science">
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-ghost" onclick="closeCandidateModal()">Cancel</button>
+                    <button type="submit" class="btn btn-secondary">Add Candidate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
