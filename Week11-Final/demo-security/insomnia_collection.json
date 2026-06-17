@@ -1,0 +1,130 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-06-17T12:00:00.000Z",
+  "__export_source": "campus-events-demo",
+  "resources": [
+    {
+      "_id": "wrk_campus_events",
+      "_type": "workspace",
+      "name": "Campus Events API",
+      "description": "How to use this collection:\n\n1. Start the app (./mvnw spring-boot:run)\n2. Run \"Login as organizer1\"\n3. Copy the \"token\" value from the response\n4. Open a protected request → Auth tab → Bearer Token → paste the token\n\nAll demo passwords: Password123!\nSee explanation.md for users and roles.",
+      "scope": "collection"
+    },
+    {
+      "_id": "fld_auth",
+      "_type": "request_group",
+      "name": "Auth",
+      "parentId": "wrk_campus_events"
+    },
+    {
+      "_id": "fld_public",
+      "_type": "request_group",
+      "name": "Public (no token needed)",
+      "parentId": "wrk_campus_events"
+    },
+    {
+      "_id": "fld_protected",
+      "_type": "request_group",
+      "name": "Protected (paste token in Auth tab)",
+      "parentId": "wrk_campus_events"
+    },
+    {
+      "_id": "req_login_organizer",
+      "_type": "request",
+      "name": "Login as organizer1",
+      "description": "Copy the token from the response. Use it on protected requests.",
+      "parentId": "fld_auth",
+      "method": "POST",
+      "url": "http://localhost:8080/api/auth/login",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"organizer1\",\n  \"password\": \"Password123!\"\n}"
+      },
+      "authentication": {}
+    },
+    {
+      "_id": "req_login_student",
+      "_type": "request",
+      "name": "Login as student1",
+      "description": "Try creating an event with this token — should get 403.",
+      "parentId": "fld_auth",
+      "method": "POST",
+      "url": "http://localhost:8080/api/auth/login",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"student1\",\n  \"password\": \"Password123!\"\n}"
+      },
+      "authentication": {}
+    },
+    {
+      "_id": "req_events_list",
+      "_type": "request",
+      "name": "Get published events",
+      "parentId": "fld_public",
+      "method": "GET",
+      "url": "http://localhost:8080/api/events",
+      "authentication": {}
+    },
+    {
+      "_id": "req_events_get",
+      "_type": "request",
+      "name": "Get event by ID",
+      "parentId": "fld_public",
+      "method": "GET",
+      "url": "http://localhost:8080/api/events/1",
+      "authentication": {}
+    },
+    {
+      "_id": "req_events_create",
+      "_type": "request",
+      "name": "Create event",
+      "description": "Auth tab → Bearer Token → paste token from login. Needs organizer1 or admin.",
+      "parentId": "fld_protected",
+      "method": "POST",
+      "url": "http://localhost:8080/api/events",
+      "headers": [
+        { "name": "Content-Type", "value": "application/json" }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"title\": \"Intro to Spring Security\",\n  \"description\": \"JWT and RBAC demo.\",\n  \"startsAt\": \"2026-12-01T14:00:00\",\n  \"location\": \"Room 101\",\n  \"capacity\": 40,\n  \"tagNames\": [\"workshop\"]\n}"
+      },
+      "authentication": {
+        "type": "bearer",
+        "token": "PASTE_TOKEN_HERE"
+      }
+    },
+    {
+      "_id": "req_reg_create",
+      "_type": "request",
+      "name": "Register for event",
+      "description": "Register for event ID 1. Paste token in Auth tab.",
+      "parentId": "fld_protected",
+      "method": "POST",
+      "url": "http://localhost:8080/api/events/1/registrations",
+      "authentication": {
+        "type": "bearer",
+        "token": "PASTE_TOKEN_HERE"
+      }
+    },
+    {
+      "_id": "req_profile_get",
+      "_type": "request",
+      "name": "Get my profile",
+      "parentId": "fld_protected",
+      "method": "GET",
+      "url": "http://localhost:8080/api/profile/me",
+      "authentication": {
+        "type": "bearer",
+        "token": "PASTE_TOKEN_HERE"
+      }
+    }
+  ]
+}
